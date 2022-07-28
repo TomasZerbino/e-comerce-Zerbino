@@ -1,0 +1,35 @@
+header {
+    background-color:rgb(86, 79, 84);
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    display: flex;
+    
+}
+.listContainer li{
+    padding: 0 1rem;
+    border: 0.3px solid rgba(47, 52, 56, 0.474);
+    border-radius: 5px;
+    margin: 0 1rem;
+    background-color: rgba(148, 148, 148, 0.579);
+
+}
+.listContainer a{
+    color: aliceblue;
+    
+}
+.nameCommerce{
+    color: azure;
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
