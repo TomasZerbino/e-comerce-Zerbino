@@ -1,3 +1,4 @@
+import CardWidget from "./CardWidget";
 import "./NavBar.css"
 
 function NavBar(){
@@ -5,13 +6,15 @@ function NavBar(){
     <header>   
         <nav>
             <a className = "nameCommerce" href = "#">ReaCommerce</a>
-        <div className ="listContainer">   
+        <div className ="listContainer"> 
+        <CardWidget/>  
             <ul>
                 <li><a href= "#">Info</a></li>
                 <li><a href= "#">Prod</a></li>
                 <li><a href= "#">Cont</a></li>
             </ul>
-        </div> 
+        </div>
+         
         </nav>
      </header>
         

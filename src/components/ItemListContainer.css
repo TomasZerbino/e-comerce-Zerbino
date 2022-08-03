@@ -1,0 +1,12 @@
+.cont{
+    border: solid 1px;
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    height: 14rem;
+}
+.cont h2{
+    text-align: start;
+    margin: 0;
+
+}

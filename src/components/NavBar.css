@@ -16,6 +16,21 @@ ul{
     display: flex;
     
 }
+
+.listContainer{
+    display: flex;
+    align-items: center;
+    
+}
+.listContainer button{
+    background-color: rgba(209, 209, 209, 0.579);
+    border: 0.3px solid rgba(47, 52, 56, 0.474);
+    border-radius: 5px;
+    padding: 5px 12px;
+    color: aliceblue;
+    display: flex;
+
+}
 .listContainer li{
     padding: 0 1rem;
     border: 0.3px solid rgba(47, 52, 56, 0.474);
@@ -26,7 +41,7 @@ ul{
 }
 .listContainer a{
     color: aliceblue;
-    
+
 }
 .nameCommerce{
     color: azure;
