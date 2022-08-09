@@ -16,12 +16,18 @@ function ItemCount(props) {
         }
         setCont(cont + 1)
     }
+    const onAdd = () =>{
+        alert('Añadido al carrito')
+    }
 
   return (
-    <div className='ItemCount'>
-        <button onClick={ decrement}>-</button>
-        <span>{cont}</span>
-        <button onClick={ increment }>+</button>
+    <div className='itemCountContainer'>
+        <div className='itemCount'>
+            <button onClick={ decrement }>-</button>
+            <span>{cont}</span>
+            <button onClick={ increment }>+</button>
+        </div>
+        <button className='buyBtn' onClick={ onAdd }>Comprar</button>
     </div>
   )
 }

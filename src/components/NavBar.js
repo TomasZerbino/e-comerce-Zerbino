@@ -5,7 +5,7 @@ function NavBar(){
     return(
     <header>   
         <nav>
-            <a className = "nameCommerce" href = "#">ReaCommerce</a>
+            <a className = "nameCommerce" href = "#"><span>Reac</span>Tienda</a>
         <div className ="listContainer"> 
         <CardWidget/>  
             <ul>
