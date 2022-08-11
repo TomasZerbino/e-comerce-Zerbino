@@ -1,5 +1,4 @@
 import CardWidget from "./CardWidget";
-import "./NavBar.css"
 
 function NavBar(){
     return(

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Item.css"
+
 
 function Item({title, description, imgurl, price}) {
   return (
@@ -17,7 +17,6 @@ function Item({title, description, imgurl, price}) {
             <button>Comprar</button>
             <span>{price}</span>
         </div>
-
     </div>
   )
 }
