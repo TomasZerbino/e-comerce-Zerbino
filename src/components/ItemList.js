@@ -8,10 +8,12 @@ function ItemList(props) {
         props.array.map( (prod) => 
         <Item 
         key={prod.id} 
+        id={prod.id}
         title={prod.title} 
         description={prod.description} 
         price={prod.price} 
-        imgurl={prod.imgurl}/>
+        imgurl={prod.imgurl}
+        category = {prod.category}/>
         )
        }
     </div>

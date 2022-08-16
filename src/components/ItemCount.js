@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import * as iconList from "@fortawesome/free-solid-svg-icons";
 
 function ItemCount(props) {
 
@@ -16,18 +18,16 @@ function ItemCount(props) {
         }
         setCont(cont + 1)
     }
-    const onAdd = () =>{
-        alert('Añadido al carrito')
-    }
+
 
   return (
     <div className='itemCountContainer'>
+        <p>Quantity:</p>
         <div className='itemCount'>
-            <button onClick={ decrement }>-</button>
+            <button onClick={ decrement }><FontAwesomeIcon icon={ iconList.faMinusSquare } /></button>
             <span>{cont}</span>
-            <button onClick={ increment }>+</button>
+            <button onClick={ increment }><FontAwesomeIcon icon={ iconList.faPlusSquare } /></button>
         </div>
-        <button className='buyBtn' onClick={ onAdd }>Comprar</button>
     </div>
   )
 }
