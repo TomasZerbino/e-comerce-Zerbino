@@ -11,14 +11,13 @@ function Item({category, id, title, description, imgurl, price}) {
         </div>
         <div className='itemTitle'>
             <h3>{title}</h3>
-            <p>{category}</p>
         </div>
         <div className='itemDescription'>
             <p>{description}</p>
         </div>
         <div className='itemButton'>
             <Link to={`/detail/${id}`}><FontAwesomeIcon icon={ iconList.faShoppingCart }/> Add to Cart</Link>
-            <span>{price}</span>
+            <span>${price}</span>
         </div>
     </div>
   )

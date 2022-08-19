@@ -3,11 +3,10 @@ import * as iconList from "@fortawesome/free-solid-svg-icons";
 
 function CardWidget() {
   return (
-    <div>
+    <div className="cardWidget">
         <button> <FontAwesomeIcon icon={ iconList.faShoppingCart } /></button>
     </div>
   )
 }
-//<FontAwesomeIcon icon={ faCoffee } />
 
 export default CardWidget

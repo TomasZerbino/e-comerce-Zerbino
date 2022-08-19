@@ -7,10 +7,10 @@ function NavBar(){
         <nav>
             <Link className = "nameCommerce" to= "/"><span>Reac</span>Tienda</Link>
         <div className ="listContainer"> 
-        <CardWidget/>  
+          
             <ul className="menu">
                 <li><Link to= "/">Home</Link></li>
-                <li><Link to= "#">Category</Link>
+                <li><Link to= "/">Category</Link>
                     <ul className="categories">
                         <li><Link to= "/category/Snack">Snk</Link></li>
                         <li><Link to= "/category/Chocolate">Choc</Link></li>
@@ -20,6 +20,7 @@ function NavBar(){
                 <li><Link to= "#">Cont</Link></li>
             </ul>
         </div>
+        <CardWidget/>
          
         </nav>
      </header>

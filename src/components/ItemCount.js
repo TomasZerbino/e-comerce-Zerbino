@@ -18,6 +18,9 @@ function ItemCount(props) {
         }
         setCont(cont + 1)
     }
+    const count = () =>{
+       
+    }
 
 
   return (
@@ -26,8 +29,9 @@ function ItemCount(props) {
         <div className='itemCount'>
             <button onClick={ decrement }><FontAwesomeIcon icon={ iconList.faMinusSquare } /></button>
             <span>{cont}</span>
-            <button onClick={ increment }><FontAwesomeIcon icon={ iconList.faPlusSquare } /></button>
+            <button onClick={ increment }  ><FontAwesomeIcon icon={ iconList.faPlusSquare } /></button>
         </div>
+        <button onClick={ () => props.onAdd(cont) }  >Confirm Quantity</button>
     </div>
   )
 }

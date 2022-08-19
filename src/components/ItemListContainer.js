@@ -3,23 +3,25 @@ import ItemList from "./ItemList";
 import dataProd from './data/dataProd'
 import { useParams } from 'react-router-dom'
 
+function getProds(){
+  return new Promise( (resolve) =>{
+    setTimeout( ()=> {
+     resolve(dataProd);
+   } , 1000)
+  })
+}
+
 function ItemListContainer(props) {
   const [data, setData] = useState([])
-  const idCategory = useParams().idCategory;
+  const {category} = useParams();
   
-  function getProds(){
-    return new Promise( (resolve) =>{
-      setTimeout( ()=> {
-      if(idCategory === undefined) resolve(dataProd);
-      let filterCat = dataProd.filter((element) => element.category === idCategory)
-      resolve(filterCat)
-     } , 1000)
-    })
-  }
-
   useEffect(()=>{
       getProds().then((resp) =>{
-        setData(resp)
+        let filterCat = resp.filter((element) => element.category === category)
+
+        if(category === undefined) setData(resp);
+        else setData(filterCat)
+        console.log(filterCat)
       })
   }, [])
 
