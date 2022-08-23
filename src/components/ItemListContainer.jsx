@@ -14,16 +14,16 @@ function getProds(){
 function ItemListContainer(props) {
   const [data, setData] = useState([])
   const {category} = useParams();
-  
+
   useEffect(()=>{
       getProds().then((resp) =>{
         let filterCat = resp.filter((element) => element.category === category)
 
-        if(category === undefined) setData(resp);
-        else setData(filterCat)
+        if(category === undefined){setData(resp)}
+        else {setData(filterCat)}
         console.log(filterCat)
       })
-  }, [])
+  }, [category])
 
     return (
     <div className="cont">

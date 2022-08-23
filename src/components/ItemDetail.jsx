@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import ItemCount from './ItemCount'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as iconList from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom'
+import {cartContext} from '../store/cartContext'
 
 function ItemDetail(props) {
     const [actualCount, setActualCount] = useState(0)
+    const {addToCart} = useContext(cartContext)
 
     function countNum(cont){
+        addToCart(props.itemSelected, cont)
         setActualCount(cont)
     }
     let estado = actualCount; 
@@ -27,6 +30,8 @@ function ItemDetail(props) {
                 <div className='detPrice'>
                     <p>Price:</p>
                     <span>${props.itemSelected.price}</span>
+                    <p>Total price:</p> 
+                    <span>${actualCount * props.itemSelected.price}</span>
                 </div>
                 
             </div>
@@ -35,7 +40,6 @@ function ItemDetail(props) {
                 <p>{props.itemSelected.description}</p>
             </div>
             <div className='detailButton'>
-                <h4>Total price: <span>${actualCount * props.itemSelected.price}</span></h4>
                 { estado === 0 ?<ItemCount initial={1} stock={props.itemSelected.stock} onAdd={countNum}/>
                 :<Link to={`/cart`}><FontAwesomeIcon icon={ iconList.faShoppingCart } />  Add to Cart</Link>}
             </div>
