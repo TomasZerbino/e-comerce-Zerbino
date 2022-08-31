@@ -2,29 +2,36 @@ import React, { useEffect, useState } from 'react'
 import dataProd from './data/dataProd'
 import ItemDetail from './ItemDetail'
 import {useParams} from 'react-router-dom'
+import fsDatabase from '../services/firebase'
+import { getDoc, collection, doc } from 'firebase/firestore'
+import { DotPulse } from '@uiball/loaders'
 
+  function getItemById (id){
+    return new Promise( (resolve) =>{
+    const prodsCollection = collection(fsDatabase,'products')
+    const docRef = doc(prodsCollection, id)
 
+    getDoc(docRef).then(snapshot =>{
+      resolve({...snapshot.data(), id: snapshot.id })
+    })
+    })
+  }
 
 function ItemDetailContainer() {
   const [data, setData] = useState([])
-  const idUrl = useParams().id;
+  const {id} = useParams();
 
-  function getProd(){
-    return new Promise( (resolve) =>{
-        let itemRequest = dataProd.find( element => element.id == idUrl)
-        resolve(itemRequest)
-    })
-  }
-  
   useEffect(()=>{
-      getProd().then((resp) =>{
+    getItemById(id).then((resp) =>{
           setData(resp)
       })
   }, [])
 
   return (
     <div>
-        <ItemDetail itemSelected={data}/>
+  
+      <ItemDetail itemSelected={data}/>
+
     </div>
   )
 }

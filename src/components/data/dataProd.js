@@ -5,7 +5,7 @@ const dataProd = [{
     "description": "nibh in lectus pellentesque at nulla suspendisse potenti cras",
     "price": 410,
     "stock": 5,
-    "category": "Snack"
+    "category": "gummies"
   }, {
     "id": 2,
     "title": "Prodder",
@@ -13,7 +13,7 @@ const dataProd = [{
     "description": "non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit",
     "price": 505,
     "stock": 16,
-    "category": "Snack"
+    "category": "gummies"
   }, {
     "id": 3,
     "title": "Domainer",
@@ -21,7 +21,7 @@ const dataProd = [{
     "description": "porttitor lacus at turpis donec posuere metus vitae ipsum",
     "price": 356,
     "stock": 15,
-    "category": "Snack"
+    "category": "chocolate"
   }, {
     "id": 4,
     "title": "Voltsillam",
@@ -29,7 +29,7 @@ const dataProd = [{
     "description": "porttitor lacus at turpis donec posuere metus vitae",
     "price": 503,
     "stock": 14,
-    "category": "Candy"
+    "category": "chips"
   }, {
     "id": 5,
     "title": "Y-Solowarm",
@@ -37,7 +37,7 @@ const dataProd = [{
     "description": "interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
     "price": 360,
     "stock": 11,
-    "category": "Candy"
+    "category": "gummies"
   }, {
     "id": 6,
     "title": "Quo Lux",
@@ -45,7 +45,7 @@ const dataProd = [{
     "description": "gravida sem praesent id massa id nisl venenatis lacinia aenean",
     "price": 380,
     "stock": 13,
-    "category": "Candy"
+    "category": "chips"
   }, {
     "id": 7,
     "title": "Temp",
@@ -53,7 +53,7 @@ const dataProd = [{
     "description": "massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at",
     "price": 420,
     "stock": 10,
-    "category": "Chocolate"
+    "category": "chocolate"
   }, {
     "id": 8,
     "title": "Flexidy",
@@ -61,7 +61,7 @@ const dataProd = [{
     "description": "primis in faucibus orci luctus et ultrices curae donec pharetra magna vestibulum aliquet ultrices",
     "price": 449,
     "stock": 11,
-    "category": "Chocolate"
+    "category": "chips"
   }, {
     "id": 9,
     "title": "Zaam-Dox",
@@ -69,7 +69,7 @@ const dataProd = [{
     "description": "nulla integer pede justo lacinia eget tincidunt eget",
     "price": 348,
     "stock": 18,
-    "category": "Chocolate"
+    "category": "chocolate"
   }, {
     "id": 10,
     "title": "Sonsing",
@@ -77,7 +77,23 @@ const dataProd = [{
     "description": "in felis eu sapien cursus vestibulum proin eu mi",
     "price": 493,
     "stock": 14,
-    "category": "Snack"
+    "category": "chips"
+  },{
+    "id": 11,
+    "title": "Zaam-Dox",
+    "imgurl": "http://dummyimage.com/260x240.png/5fa2dd/ffffff",
+    "description": "nulla integer pede justo lacinia eget tincidunt eget",
+    "price": 348,
+    "stock": 18,
+    "category": "chocolate"
+  },{
+    "id": 12,
+    "title": "Y-Solowarm",
+    "imgurl": "http://dummyimage.com/260x240.png/cc0000/ffffff",
+    "description": "interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
+    "price": 360,
+    "stock": 11,
+    "category": "gummies"
   }]
 
   export default dataProd;

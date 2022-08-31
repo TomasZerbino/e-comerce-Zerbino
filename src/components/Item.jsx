@@ -16,7 +16,7 @@ function Item({category, id, title, description, imgurl, price}) {
             <p>{description}</p>
         </div>
         <div className='itemButton'>
-            <Link to={`/detail/${id}`}><FontAwesomeIcon icon={ iconList.faShoppingCart }/> Add to Cart</Link>
+            <Link to={`/detail/${id}`}><p className='eye'><FontAwesomeIcon icon={ iconList.faEye }/></p> See More</Link>
             <span>${price}</span>
         </div>
     </div>

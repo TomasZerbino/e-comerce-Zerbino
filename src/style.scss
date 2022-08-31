@@ -78,19 +78,39 @@ header {
 }
 
 .cardWidget{
+    display: flex;
     button{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         padding: 5px;
-        margin: 8px 20px 8px 130px;
+        margin: 8px 0px 8px 130px;
         color: #29293d;
+    }
+    a{
+        color: #29293d;
+    }
+
+    >div{
+        margin-top: 2px;
+        background-color: #29293d;
+        height: fit-content;
+        border-radius: 50%;
+        padding: 1px 5px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: aliceblue;
+    }
+    span{
+        font-size: 0.7rem;
+        text-align: center;
     }
 }
 
 //----------item count-------
 .itemCount{
-    width: 110px;
+    width: 150px;
     display: flex;
     justify-content: space-between;
+    font-weight: 500;
     padding: 0.3rem ;
     border-radius: 20px;
     outline: none;
@@ -105,7 +125,10 @@ header {
 }
     
 .itemCountContainer{
-    width: fit-content;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     p{
         padding: 4px 1px;
@@ -116,15 +139,17 @@ header {
 
     }
     > button{
-        background-color: #72BC0F;
-        color: aliceblue;
+        border: solid 1px #72BC0F;
+        font-size: 1.1rem;
+        color: #72BC0F;
         border-radius: 20px;
-        padding: 3px 5px;
+        padding: 6px 1rem;
     }
 }
 .itemCountContainer > button:hover {
-    background-color: #29293d;
+    background-color: #72BC0F;
     transition: all 0.4s;
+    color: aliceblue;
 }
 // -------------card----------------
 .itemList{
@@ -143,7 +168,7 @@ header {
                         'title' 
                         'desc'
                         'button' ;
-    grid-template-rows: 55% 10% 22% 10%;                    
+    grid-template-rows: 55% 10% 22% 13%;                    
 }
 
 
@@ -158,7 +183,7 @@ header {
 
 .itemDescription{
     grid-area: desc;
-    width: 80%;
+    width: 85%;
     margin: auto;
     border-top: solid 0.6px rgba(0, 0, 0, 0.637);
     padding: 8px 3px;
@@ -171,18 +196,22 @@ header {
     grid-area: button;
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 85%;
     margin: auto;
-    margin-top: 8px;
-    padding: 1rem 0;
+    padding: 0.7rem 0;
     border-top: solid 0.6px rgba(0, 0, 0, 0.637);
 
-    button{
+    a{
         background-color: #1492CC;
         color: aliceblue;
-        font-size: 1.1rem;
-        padding: 0.2rem 0.4rem;
+        padding: 5px;
         border-radius: 5px;
+
+    }
+    .eye{
+        font-size: 1rem;
+        display: inline-block;
+        padding-right: 3px;
     }
     span{
         font-weight: bolder;
@@ -212,6 +241,7 @@ header {
     grid: detailTitle;
     padding: 20px;
     font-size: 1.5rem;
+    color: #29293d;
     p{
         font-weight: 300;
         font-size: 0.9rem;
@@ -236,6 +266,9 @@ header {
             padding: 10px 1px;
             text-align: start;
         }
+        .totalPrice{
+            color: #29293d;
+        }
     }
 }
 .detailDescription{
@@ -248,6 +281,7 @@ header {
     }
     h4{
         padding-bottom: 8px;
+        color: #29293d;
     }
 }
 .detailButton{
@@ -256,14 +290,19 @@ header {
     justify-content: space-around;
     align-items: center;
 
-    // button{
-    //     background-color: #1492CC;
-    //     color: aliceblue;
-    //     padding: 5px 9px;
-    //     border-radius: 20px;
-    //     font-size: 1.2rem;
-    // }
+    a{
+        border: solid 2px #2b2b5e;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        border-radius: 5px;
+        color: #2b2b5e;
+    }
     h4{
         color: #919999;
     }
+}
+.detailButton > a:hover{
+    background-color: #2b2b5e;
+    color: aliceblue;
 }
