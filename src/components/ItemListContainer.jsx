@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from "./ItemList";
-import dataProd from './data/dataProd'
 import { useParams } from 'react-router-dom'
 import fsDatabase from '../services/firebase'
 import { getDocs, collection, query, where } from 'firebase/firestore'
+import { DotPulse } from '@uiball/loaders'
 
 function getProds(){
   return new Promise( (resolve) =>{
@@ -44,6 +44,14 @@ function ItemListContainer(props) {
       else {getDbItem(category).then((resp) =>{
         setData(resp)})} 
   }, [category])
+
+  if(data.length === 0){
+    return(<DotPulse 
+      size={40}
+      speed={1.3} 
+      color="black" 
+     />);
+  }
 
     return (
       <>

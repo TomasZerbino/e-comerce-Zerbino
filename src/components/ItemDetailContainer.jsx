@@ -26,14 +26,23 @@ function ItemDetailContainer() {
           setData(resp)
       })
   }, [])
+  
+  if(data.length === 0){
+    return(<DotPulse 
+      size={85}
+      speed={1.8} 
+      color="grey" 
+     />);
+  }
 
   return (
     <div>
-  
-      <ItemDetail itemSelected={data}/>
 
+      <ItemDetail itemSelected={data}/>
+  
     </div>
   )
 }
 
 export default ItemDetailContainer 
+
