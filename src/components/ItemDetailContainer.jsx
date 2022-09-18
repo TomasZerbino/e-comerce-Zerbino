@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import dataProd from './data/dataProd'
 import ItemDetail from './ItemDetail'
 import {useParams} from 'react-router-dom'
 import fsDatabase from '../services/firebase'
@@ -28,11 +27,14 @@ function ItemDetailContainer() {
   }, [])
   
   if(data.length === 0){
-    return(<DotPulse 
+    return(
+    <div className='loader'>
+      <DotPulse 
       size={85}
       speed={1.8} 
       color="grey" 
-     />);
+     />
+    </div>);
   }
 
   return (

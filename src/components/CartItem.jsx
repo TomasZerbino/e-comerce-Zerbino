@@ -9,8 +9,8 @@ function CartItem({ price, img, title, removeItem, quantity, id  }) {
         <img src={img} alt={title} />
       </td>
       <td>{title}</td>
-      <td>$ {price}</td>
       <td>{quantity}</td>
+      <td>$ {price}</td>
       <td><button onClick={ ()=> removeItem(id) }><FontAwesomeIcon icon={ iconList.faTrash }></FontAwesomeIcon></button></td>
     </tr>
   )

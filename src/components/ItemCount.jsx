@@ -18,9 +18,6 @@ function ItemCount(props) {
         }
         setCont(cont + 1)
     }
-    const count = () =>{
-       
-    }
 
 
   return (

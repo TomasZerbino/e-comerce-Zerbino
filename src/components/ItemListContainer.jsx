@@ -46,23 +46,23 @@ function ItemListContainer(props) {
   }, [category])
 
   if(data.length === 0){
-    return(<DotPulse 
-      size={40}
-      speed={1.3} 
-      color="black" 
-     />);
+    return(
+    <div className='loader'>
+      <DotPulse 
+      size={85}
+      speed={1.8} 
+      color="grey" 
+     /></div>);
   }
 
     return (
       <>
         {
-          (category)?<h2>Results:</h2>
-          : <h2>{props.greeting} Products:</h2>
+          (category)?<h2 className='prodTitle'>Results:</h2>
+          : <h2 className='prodTitle'>{props.greeting} Products:</h2>
         }
         
     <div className="cont">
-        
-        
         <ItemList array={ data }/>
     </div>
     </>

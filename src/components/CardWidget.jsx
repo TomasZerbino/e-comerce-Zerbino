@@ -15,9 +15,9 @@ function CardWidget() {
   return (
     <div className="cardWidget">
         <button> <Link to={'/cart'}><FontAwesomeIcon icon={ iconList.faShoppingCart } /></Link> </button>
-        {(cartCount === 0)? <div><span><FontAwesomeIcon icon={ iconList.faPlus } /></span></div>
+        {(cartCount === 0)? <span><FontAwesomeIcon icon={ iconList.faPlus } /></span>
         :
-        <div>{cartCount}</div>
+        <span>{cartCount}</span> 
         }
     </div>
   )

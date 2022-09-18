@@ -2,12 +2,10 @@ import React, {useContext} from 'react'
 import {cartContext} from '../store/cartContext'
 import { Link } from 'react-router-dom'
 import CartItem from './CartItem';
-import UserForm from './UserForm';
-
 
 function CartView() {
-    const {cart, removeItem} = useContext(cartContext)
-
+    const {cart, removeItem, total, clear} = useContext(cartContext)
+    
   return (
     <>
             {cart.length === 0
@@ -15,8 +13,8 @@ function CartView() {
             
             :
        
-           <div className="main container mx-auto mt-5">
-        <h1>Tu Carrito</h1>
+      <div className='cartContainer'>
+        <h1>Cart</h1>
         <table>
           <thead>
             <tr>
@@ -24,7 +22,7 @@ function CartView() {
               <th>Name</th>
               <th>Quantity</th>
               <th>Price</th>
-              <th>Remover</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -43,9 +41,14 @@ function CartView() {
             })}
           </tbody>
         </table>
+        <div className='totalPrice'>
+          <button  onClick={ ()=> clear()}>Clear cart</button>
+          <span>Total: {(total).toFixed(2)}</span>
+        </div>
+        <div className='checkOutDiv'>
+        <Link className='checkOutBtn' to={'/checkout'}>Check-Out</Link>
+        </div>   	
       </div>}
-      <div></div>
-      <UserForm cart={cart}/>
     </> 
   )
 }

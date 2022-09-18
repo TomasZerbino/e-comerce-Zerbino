@@ -1,18 +1,5 @@
 //----------------NavBar-----------
-.cont{
-    border: solid 1px;
-    width: 80%;
-    margin: auto;
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
 
-    h2{
-        text-align: start;
-        margin: 0;
-    }
-   
-}
 header {
     background-color: #2A98FF;
 
@@ -38,20 +25,7 @@ header {
 
     }
 }
-.categories{
-    position: absolute;
-    background-color: #29293d;
-    width: 110%;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 1s;
 
-    a{
-        display: block;
-        padding: 15px;
-        color: aliceblue;
-    }
-}
 .menu li:hover .categories{
     visibility: visible;
     opacity: 1;
@@ -79,6 +53,7 @@ header {
 
 .cardWidget{
     display: flex;
+    margin-top: 5px;
     button{
         font-size: 1.8rem;
         padding: 5px;
@@ -88,22 +63,13 @@ header {
     a{
         color: #29293d;
     }
-
-    >div{
-        margin-top: 2px;
-        background-color: #29293d;
-        height: fit-content;
-        border-radius: 50%;
-        padding: 1px 5px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: aliceblue;
-    }
     span{
-        font-size: 0.7rem;
-        text-align: center;
+        font-weight: 700;
+        padding-top: 3px ;
     }
+
 }
+
 
 //----------item count-------
 .itemCount{
@@ -151,13 +117,28 @@ header {
     transition: all 0.4s;
     color: aliceblue;
 }
-// -------------card----------------
+
+//------------ItemList-------
 .itemList{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-    
+.prodTitle{
+    text-align: start;
+    width: 80%;
+    margin: auto;
+    padding: 30px 0 10px 0;
+}
+.cont{
+    border: solid 1px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+// -------------card----------------    
 .itemContainer{
     border: solid 1px rgba(78, 39, 39, 0.562);
     width: 260px;  
@@ -204,18 +185,15 @@ header {
     a{
         background-color: #1492CC;
         color: aliceblue;
-        padding: 5px;
+        padding: 5px 10px;
         border-radius: 5px;
+        font-weight: 500;
 
-    }
-    .eye{
-        font-size: 1rem;
-        display: inline-block;
-        padding-right: 3px;
     }
     span{
         font-weight: bolder;
         font-size: 1.1rem;
+        padding: 3px 10px;
     }
 }
 
@@ -307,8 +285,174 @@ header {
     color: aliceblue;
 }
 
+//------------Cart-----------
+
+.cartContainer{
+    width: fit-content;
+    margin: 20px auto;
+    min-height:  70vh;
+
+    h1{
+        margin: 30px 0 10px 0;
+    }
+
+    th{
+        font-size: 1.3rem;
+        width: 20%;
+        background:#29293d52 ;
+    }
+    td{
+        padding-top: 30px;
+        font-weight: 500;
+        font-size: 1.2rem;
+        img{
+            width: 130px;
+        }
+        svg{
+            font-size: 1.7rem;
+            color: rgb(230, 38, 38);
+        }
+    }
+
+    .totalPrice{
+        margin: 1.5rem 16px 2rem 16px ;
+        display: flex;
+        justify-content: space-between;
+        text-align: end;
+        font-weight: 700;
+        font-size: 1.1rem;
+        
+        button{
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: solid 2px #29293d;
+            padding: 0 5px;
+            border-radius: 3px;
+        }
+        span{
+            padding: 5px 10px;
+        }
+    }
+}
+.totalPrice > button:hover{
+    background-color: #2b2b5e;
+    color: aliceblue;
+    transition: all 0.3s;
+}
+
+.checkOutDiv{
+    text-align: end;
+    margin: 8px 16px;
+}
+.checkOutBtn{
+    background-color: #2A98FF;
+    color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 4px; 
+}
+.checkOutBtn:hover{
+    background-color: #2b2b5e;
+}
+
+//-----------Form--------------
+.formH1{
+    margin: 20px 0;
+    
+}
+
+.formCont{
+
+    background-color: #e7e7e7;
+    width: 45%;
+    margin: 50px auto;
+    padding: 40px 0 ;
+
+    .formInput{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin: auto;
+        padding-top: 20px;
+        
+        
+        label{
+            text-align: start;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+        input{
+            border: solid 2px #29293d;
+            height: 1.8rem;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.658);
+        }
+    }
+}
+.btnsForm{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    margin: 30px auto;
+    
+    .submitBtn button{
+        background-color: #2A98FF;
+        padding: 8px 10px;
+        color: aliceblue;
+        border-radius: 4px;
+    }
+    .resetBtn{
+        background-color: #2b2b5e;
+        color: aliceblue;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+    .backBtn{
+        border: 2px solid #2b2b5e;
+        color: #2b2b5e;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+}
+a .backBtn
+button .resetBtn
+.submitBtn{
+    padding: 40px;
+}
+//-----------Loader------------
+.loader{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+//----------Thanks--------------
+.thanksDiv{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-size: 3rem;
+        color: #29293d;
+        margin: 30px;
+    }
+    a{
+        color: #2b2b5e;
+        border-radius: 4px;
+        padding: 6px 12px;
+        border: 2px solid #2b2b5e;
+    }
+}
+
 //------------Footer------------
-footer{
+.footer{
     background-color: #29293d;
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
 }
